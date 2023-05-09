@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<ProyectoWeb.Models.Producto>
+
+<font face="Lucida Calligraphy">
+<center> <h1>EL MUNDO DE PLASTICOS</h1> </center>
+</font>
+
+@*width="687px" height="435px"*@
+
+
+<table class="table table-dark">
+    <thead>
+
+        <tr>
+            <th>Id</th>
+            <th>NombreDelProducto</th>
+            <th>DescripcionDelProducto</th>
+            <th>Id_Clientes</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <td>@item.NombreDelProducto</td>
+                <td>@item.DescripcionDelProducto</td>
+                <td>@item.IdClientes</td>
+            </tr>
+        }
+    </tbody>
+</table> 
